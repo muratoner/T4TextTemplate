@@ -1,0 +1,5 @@
+﻿/**
+* Bu Header.txt dosyayı deneme amaçlı oluşturulmuştur.
+* Oluşturan: <#= Environment.UserName #>
+* Oluşturma Tarihi: <#= DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss") #>
+*/

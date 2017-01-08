@@ -1,0 +1,25 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ import namespace="System.Xml" #>
+<#@ output extension=".xml" #>
+
+<#
+    var xml = new XmlDocument();
+    var person = xml.CreateElement("Person");
+    person.AppendChild(CreateChildWithText(xml, "Murat"));
+    xml.AppendChild(person);
+	Write(xml.InnerXml);
+#>
+
+<#+
+    private XmlNode CreateChildWithText(XmlDocument doc, string text)
+    {
+        var node = doc.CreateElement("Name");
+        var xmlAttr = doc.CreateAttribute("Job");
+        xmlAttr.InnerText = "Software Developer";
+        node.Attributes.Append(xmlAttr);
+        node.InnerText = text;
+		return node;
+    }
+#>

@@ -1,0 +1,20 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ output extension=".txt" #>
+
+Kareler:
+<#
+	for (int i = 0; i < 4; i++)
+    {
+#>
+		<#= i + 1 #> sayısının karesi <#= Square(i+1) #>
+<#
+    }
+#>
+Liste bitişi.
+<#+ // Sınıf özelliği bloğu
+    int Square(int i)
+    {
+        return i * i;
+    }
+#>

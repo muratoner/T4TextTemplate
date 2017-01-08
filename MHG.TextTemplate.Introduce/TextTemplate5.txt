@@ -1,0 +1,7 @@
+﻿
+Kareler:
+		1 sayısının karesi 1
+		2 sayısının karesi 4
+		3 sayısının karesi 9
+		4 sayısının karesi 16
+Liste bitişi.
